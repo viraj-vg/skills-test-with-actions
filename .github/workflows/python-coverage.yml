@@ -23,7 +23,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip intsall -r requirements.txt
+          pip install -r requirements.txt
           pip install pytest==8.4.1
           pip install coverage==7.9
           pip install pytest-cov==6.2.1
@@ -35,8 +35,8 @@ jobs:
         uses: py-cov-action/python-coverage-comment-action@v3
         with:
           GITHUB_TOKEN: ${{ github.token }}
-          MINIMUN_GREEN: 90
+          MINIMUM_GREEN: 100
           MINIMUM_ORANGE: 70
           
       - name: Fail if below threshold
-        run: coverage report --fail-under=90
+        run: coverage report --fail-under=100

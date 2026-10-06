@@ -139,11 +139,11 @@ Finished workflow file: `.github/workflows/python-package.yml.example`
      uses: py-cov-action/python-coverage-comment-action@v3
      with:
        GITHUB_TOKEN: ${{ github.token }}
-       MINIMUM_GREEN: 90
+       MINIMUM_GREEN: 100
        MINIMUM_ORANGE: 70
 
    - name: Fail if below threshold
-     run: coverage report --fail-under=90
+     run: coverage report --fail-under=100
    ```
 
    {% endraw %}
